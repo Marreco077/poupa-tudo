@@ -1,0 +1,50 @@
+HELP.md
+
+# --- Maven ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# --- IDEs (Configs locais que não devem subir) ---
+# STS / Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# --- Sistema Operacional (Lixo de Mac/Windows) ---
+.DS_Store
+Thumbs.db
+
+# --- Logs e Arquivos Temporários ---
+*.log
+*.pid
+
+# --- Docker & Dados (Prevenção) ---
+postgres_data/
+data/
+db/
+.env

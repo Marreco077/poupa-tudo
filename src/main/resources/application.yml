@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: poupatudo-api
+
+  datasource:
+    # Conexão com o seu Docker
+    url: jdbc:postgresql://localhost:5432/poupadb
+    username: marreco      # Seu usuário do docker-compose
+    password: 1234         # Sua senha do docker-compose
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    # Cria as tabelas automaticamente (users, etc)
+    hibernate:
+      ddl-auto: update
+
+    # Mostra o SQL no console (para você ver o que está acontecendo)
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
