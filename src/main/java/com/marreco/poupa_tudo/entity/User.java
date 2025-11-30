@@ -32,17 +32,17 @@ public class User {
     private String password;
 
     @CreationTimestamp
+    @Column(updatable = false)
     private LocalDateTime createdAt;
 
     protected User() {}
 
     public User(UUID id, String name, String lastName, String email, String password) {
         this.id = id;
-        this.name = name;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-
+        setName(name);
+        setLastName(lastName);
+        setEmail(email);
+        setPassword(password);
         this.createdAt = LocalDateTime.now();
     }
 
