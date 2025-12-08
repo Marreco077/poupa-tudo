@@ -1,5 +1,6 @@
 package com.marreco.poupa_tudo.entity;
 
+import com.marreco.poupa_tudo.enums.TransactionType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
@@ -63,11 +64,11 @@ public class Account {
 
     public LocalDateTime getCreatedAt() { return createdAt; }
 
-    /*public void updateBalance(BigDecimal amount, TransactionType type) {
-        if (type == TransactionType.RECEITA) {
+    public void updateBalance(BigDecimal amount, TransactionType type) {
+        if (type == TransactionType.INCOME) {
             this.balance = this.balance.add(amount);
         } else {
             this.balance = this.balance.subtract(amount);
         }
-    }*/
+    }
 }
